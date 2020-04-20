@@ -12,3 +12,4 @@ Webotron currently has the following features:
 
 - List list_buckets
 - List Content of list_buckets
+- Sync directory with S3
