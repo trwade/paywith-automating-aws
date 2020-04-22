@@ -17,6 +17,8 @@ import mimetypes
 import boto3
 import click
 
+import bucket
+
 
 session = boto3.Session(profile_name='pythonAutomation')
 s3 = session.resource('s3')
@@ -31,8 +33,8 @@ def cli():
 @cli.command('list-buckets')
 def list_buckets():
     """List all s3 buckets in an account."""
-    for b in s3.buckets.all():
-        print(b)
+    for bucket in s3.buckets.all():
+        print(bucket)
 
 
 @cli.command('list-bucket-objects')
